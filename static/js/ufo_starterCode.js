@@ -24,7 +24,8 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-
+function handleClick() {
+  let date = d3.select("#datetime").property("value");
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
@@ -56,7 +57,7 @@ function updateFilters() {
     
   
     // 10. Finally, rebuild the table using the filtered data
-    
+    buildTable(filteredData);
   }
   
   // 2. Attach an event to listen for changes to each filter
